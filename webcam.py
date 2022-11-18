@@ -16,8 +16,8 @@ while True:
         print("You've hit the Escape button, closing the app...")
         break
     elif k%256 == 32:
-        img_name = "frame_{}.png".format(img_counter)
-        cv2.imwrite(img_name, frame)
+        img_name = "frame_{}.jpeg".format(img_counter)
+        cv2.imwrite(img_name, frame, [int(cv2.IMWRITE_JPEG_QUALITY), 100])
         print("Screenshot taken")
         img_counter += 1
 
