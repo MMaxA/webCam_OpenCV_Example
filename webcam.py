@@ -21,8 +21,11 @@ while True:
         arr.append(frame)
         cv2.imwrite(img_name, frame, [int(cv2.IMWRITE_JPEG_QUALITY), 100])
         print("Screenshot taken")
-        cv2.imshow("Picture_{}.".format(img_counter), arr[img_counter])
+        #cv2.imshow("Picture_{}.".format(img_counter), arr[img_counter])
+        print(arr)
         img_counter += 1
+
+print(type(arr))
 
 cam.release()
 cam.destroyAllWindows()
